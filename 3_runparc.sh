@@ -5,7 +5,7 @@
 # This takes a dtseries and dlabel file and creates ptseries and timecourses for them.
 # This does it for both regular and subcortical parcelations for each dlabel.
 
-## This script does not create symbolic links and does not add these to subjects spec files. for that look into /mnt/max/shared/projects/WASHU_DATA_NARDOS/Moosa_Val/old/runaparc.sh and Consult Moosa or Oscar.
+## This script does not create symbolic links and does not add these to subjects spec files. for that look into spec_link.sh and Consult Moosa or Oscar.
 
 ## Requirements:
 
@@ -74,7 +74,7 @@ while read StudyFolder;do
 			wb_command -cifti-transpose ${SubCort_out} ${SubCort_out_trans}
 			SubCort_csv_out=${StudyFolder}/analyses_v2/timecourses/${parcel}_subcortical.csv
 			wb_command -cifti-convert -to-text $SubCort_out_trans $SubCort_csv_out -col-delim ,
-			rm -f ${SubCort_out_trans}## Defining inputs and outputs
+			rm -f ${SubCort_out_trans}
 		done
 	done
 ## This is Step 1. Path to your Studyfolder.txt here
