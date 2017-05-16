@@ -12,12 +12,12 @@ wb_command -cifti-separate $label_in COLUMN -label CORTEX_LEFT $left -label CORT
 ## Transform giftis into ciftis
 
 # Predifine names
-left_label=left.dlabel.nii
-right_label=right.dlabel.nii
+#left_label=left.dlabel.nii
+#right_label=right.dlabel.nii
 
 # Make the conversion
-wb_command -cifti-create-label ${left_label} -left-label ${left}
-wb_command -cifti-create-label ${right_label} -right-label ${right}
+#wb_command -cifti-create-label ${left_label} -left-label ${left}
+#wb_command -cifti-create-label ${right_label} -right-label ${right}
 
 ## Combine LEFT, RIGHT and SUBCORTICAL
 
@@ -27,8 +27,9 @@ subcifti=/group_shares/HORAK_LAB/ROIs/volume_to_label/PPN+STN/label.allcombined.
 subc=/group_shares/HORAK_LAB/ROIs/volume_to_label/PPN+STN/label.allcombined.labeled.2.nii
 
 label_combined=SMA+STN+PPN.dlabel.nii
-template2=/group_shares/FAIR_LAB/scratch/Oscar/Jeya/aparc_subcortical.dlabel.nii
+#template2=/group_shares/FAIR_LAB/scratch/Oscar/Jeya/aparc_subcortical.dlabel.nii
 
+# One of these 3 to be selected, right now -cifti-create-label works, others dont just yet.
 wb_command -cifti-create-label ${label_combined} -left-label ${left} -right-label ${right} -volume ${subc} ${subc}
 
 /remote_home/perronea/Projects/workbench/bin_linux64/wb_command -cifti-create-dense-from-template ${template} ALL_WHITE.dlabel.nii -label CORTEX_LEFT $left -label CORTEX_RIGHT $right -volume ALL_WHITE_MATTER ${subc}
