@@ -1,7 +1,16 @@
-. ${1}
+#! /bin/bash
 
 #This Script is only for subcortical ROIs. Will not work for Cortical - that requires surface mapping (which isn't the best option).
 #Written by Moosa Ahmed 4/17/2017
+#Last Edited 10/30/2017
+. ${1}
+
+if [ $# -ne 1 ]; then
+	echo -e "\nUsage:	`basename $0` <run_file>\n"
+	echo -e "	Example: `basename $0` run_1.sh\n"
+	echo -e "	...Outputs dlabel file made from your subcortical ROI \n"
+	exit 1
+fi
 
 ##Naming outputs
 mkdir ${out_folder}

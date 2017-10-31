@@ -1,4 +1,7 @@
+#! /bin/bash
+
 #This Script is only for subcortical ROIs. Will not work for Cortical - that requires surface mapping (which isn't the best option).
+#Written by Moosa Ahmed 4/17/2017
 #Last edited by Moosa Ahmed 10/30/2017
 
 ##Path to the same templates on your cluster or similar for your cohort. 
