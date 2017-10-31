@@ -31,4 +31,4 @@ flirt -interp nearestneighbour -in $vol1 -ref $vol_lab_template -init ${out_fold
 ${path_wb_c} -volume-label-import $out_vol $lut_file $labeled_vol
 ${path_wb_c} -cifti-create-dense-from-template ${template} ${output_label} -volume-all ${labeled_vol}
 
-rm ${out_folder}/identity.mat
+rm -f ${out_folder}/identity.mat
