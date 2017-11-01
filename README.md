@@ -1,5 +1,6 @@
 # volumetric_roi_to_label
-3 step code to convert a subcortical volume nifti to a dlabel, combine with cortical ROIs and then parcellate your subjects using your new dlabel file.
+
+Three step code to convert a subcortical volume nifti to a dlabel, combine with cortical ROIs and then parcellate your subjects using your new dlabel file.
 
 - run_1.sh is the wrapper for 1_New_volume_to_label.sh.
 
