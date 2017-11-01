@@ -47,7 +47,7 @@ while read SubjectList;do
 			#echo ${Cort_label}  ${Cort_out} ${Cort_out_trans}
 
 			## Parcellating
-			#wb_command -cifti-parcellate ${f_orig} ${Cort_label} COLUMN ${Cort_out}
+			wb_command -cifti-parcellate ${f_orig} ${Cort_label} COLUMN ${Cort_out}
 			
 			## Transforming cifti and converting to csv and removing transformed ptseries. 
 			## Transforming is required so Timecourses can be used by Gui_environments and conforms with FNL_PREPROC 
